@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informativa sulla Privacy | Parma Kendo Kai</title>
+<meta name="description" content="Informativa sul trattamento dei dati personali della Parma Kendo Kai, ai sensi del GDPR.">
+<link rel="icon" href="images/tiger-logo-icon.webp">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0a0907', panel: '#171310', paper: '#ede6d8',
+        dojo: { orange: '#ff7a1a', red: '#c81e1e', yellow: '#f2b705' }
+      },
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        jp: ['Shippori Mincho', 'serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-ink text-paper font-body antialiased">
+<a class="skip-link" href="#content">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center gap-3" href="index.html">
+      <img src="images/tiger-logo-icon.webp" alt="Stemma Parma Kendo Kai" class="h-10 w-10 rounded-full shrink-0 border border-dojo-orange/40">
+      <span class="font-jp text-xl md:text-2xl text-paper leading-none">パルマ剣道会</span>
+      <span class="font-display text-sm md:text-base tracking-wide text-dojo-orange hidden sm:inline">PARMA KENDO KAI</span>
+    </a>
+    <nav class="hidden lg:flex items-center" aria-label="Menu principale">
+      <a class="nav-link px-3 py-2 text-sm" href="index.html">Home</a><a class="nav-link px-3 py-2 text-sm" href="galleria.html">Galleria</a><a class="nav-link px-3 py-2 text-sm" href="corso-bambini.html">Corso Bambini</a><a class="nav-link px-3 py-2 text-sm" href="principi-del-kendo.html">Principi del Kendo</a><a class="nav-link px-3 py-2 text-sm" href="modulistica.html">Modulistica</a><a class="nav-link px-3 py-2 text-sm" href="conan-cup.html">CONAN CUP</a><a class="nav-link px-3 py-2 text-sm" href="codice-condotta.html">Codice di Condotta</a>
+      
+    <div class="dropdown">
+      <button type="button" class="dropdown-trigger nav-link flex items-center gap-1.5 px-3 py-2 text-sm" aria-expanded="false" aria-haspopup="true">
+        Contatti &amp; Info
+        <svg class="dropdown-caret w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dropdown-panel">
+        <a href="contatti-info/dove-quando.html">Dove & Quando</a><a href="contatti-info/come-iniziare.html">Come iniziare</a><a href="contatti-info/costi.html">Costi & Attrezzatura</a><a href="contatti-info/risorse.html">Risorse</a>
+      </div>
+    </div>
+    </nav>
+    <button type="button" class="nav-toggle lg:hidden text-paper font-display text-sm border border-dojo-orange/40 px-3 py-1.5" aria-expanded="false">
+      MENU
+    </button>
+  </div>
+  <div class="mobile-menu lg:hidden border-t border-white/10">
+    <nav aria-label="Menu principale (mobile)" class="py-2">
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="index.html">Home</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="galleria.html">Galleria</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="corso-bambini.html">Corso Bambini</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="principi-del-kendo.html">Principi del Kendo</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="modulistica.html">Modulistica</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="conan-cup.html">CONAN CUP</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="codice-condotta.html">Codice di Condotta</a>
+      <button type="button" class="mobile-submenu-toggle w-full flex items-center justify-between px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" aria-expanded="false">
+        <span>Contatti &amp; Info</span>
+        <svg class="w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-submenu bg-panel/60">
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/dove-quando.html">Dove & Quando</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/come-iniziare.html">Come iniziare</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/costi.html">Costi & Attrezzatura</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/risorse.html">Risorse</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page-banner">
+  <span class="page-kanji font-jp" aria-hidden="true">個人情報</span>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 relative">
+    <h1 class="font-display text-4xl md:text-5xl text-paper mb-3">Informativa sulla Privacy</h1>
+    <p class="text-paper-dim max-w-xl">Trattamento dei dati personali ai sensi degli artt. 13-14 del Regolamento (UE) 2016/679 (GDPR).</p>
+  </div>
+</div>
+<div class="max-w-3xl mx-auto px-5 md:px-8 py-16 prose-pkk">
+<p class="text-sm text-paper-dim/60 mb-8"><em>Ultimo aggiornamento: da compilare alla pubblicazione.</em></p>
+
+<h2 class="section-heading">Titolare del trattamento</h2>
+<p>Parma Kendo Kai a.s.d., con sede in Via San Leonardo 191a, Parma (Aiki Center) &mdash; email: <a href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a>.</p>
+
+<h2 class="section-heading">Quali dati raccogliamo e perch&eacute;</h2>
+<p>Raccogliamo dati personali attraverso i moduli collegati al sito (Google Forms), in particolare:</p>
+<ul>
+  <li><strong>Modulo di iscrizione</strong>: nome, cognome, dati anagrafici e di contatto, certificato medico &mdash; per gestire il tesseramento associativo, CSEN e C.I.K. (Confederazione Italiana Kendo).</li>
+  <li><strong>Modulo di contatto</strong>: nome, email, messaggio &mdash; per rispondere a richieste di informazioni.</li>
+  <li><strong>Upload documenti</strong> (certificato medico, modulo privacy): per gli obblighi di tesseramento sportivo.</li>
+</ul>
+<p>Se l'iscritto &egrave; minorenne, il trattamento avviene sulla base del consenso di chi esercita la responsabilit&agrave; genitoriale. Per le regole di tutela dei minori all'interno delle attivit&agrave; sportive, vedi il <a href="codice-condotta.html">Codice di Condotta &ndash; Safeguarding</a>.</p>
+
+<h2 class="section-heading">Base giuridica</h2>
+<p>Il trattamento si fonda sul consenso dell'interessato (art. 6.1.a GDPR) e, per le finalit&agrave; di tesseramento sportivo, sull'esecuzione del rapporto associativo e sugli obblighi verso gli enti affilianti (CSEN, C.I.K.).</p>
+
+<h2 class="section-heading">Come trattiamo i dati</h2>
+<p>I moduli del sito sono gestiti tramite <strong>Google Forms, Google Sheets e Google Drive</strong> (fornitore: Google Ireland Limited), che agisce come responsabile del trattamento per conto dell'associazione. I dati sono trattati con strumenti elettronici e misure di sicurezza adeguate a prevenirne la perdita, l'uso illecito o l'accesso non autorizzato. Google pu&ograve; trattare i dati anche al di fuori dello Spazio Economico Europeo, sulla base delle clausole contrattuali standard previste dalla normativa europea.</p>
+
+<h2 class="section-heading">A chi comunichiamo i dati</h2>
+<p>I dati raccolti per il tesseramento vengono comunicati a CSEN e alla Confederazione Italiana Kendo, nella misura necessaria all'affiliazione e alla partecipazione a corsi e competizioni. Non cediamo dati a terzi per finalit&agrave; commerciali o pubblicitarie.</p>
+
+<h2 class="section-heading">Per quanto tempo conserviamo i dati</h2>
+<p>I dati sono conservati per il tempo necessario alle finalit&agrave; sopra indicate e comunque non oltre la durata del rapporto associativo, salvo obblighi di legge o contabili/fiscali che richiedano una conservazione pi&ugrave; lunga.</p>
+
+<h2 class="section-heading">I tuoi diritti</h2>
+<p>In qualsiasi momento puoi richiedere: accesso ai tuoi dati, rettifica, cancellazione, limitazione del trattamento, opposizione, portabilit&agrave; dei dati. Puoi esercitare questi diritti scrivendo a <a href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a>. Hai inoltre diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener">www.garanteprivacy.it</a>).</p>
+
+<p class="text-sm text-paper-dim/60 mt-10">Per l'uso di cookie e strumenti di terze parti sul sito, vedi la <a href="cookie-policy.html">Cookie Policy</a>.</p>
+</div></main>
+<footer class="site-footer">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid gap-10 sm:grid-cols-3">
+    <div>
+      <p class="font-display text-lg text-paper mb-3">Parma Kendo Kai a.s.d.</p>
+      <p class="text-paper-dim text-sm leading-relaxed">Via San Leonardo 191a<br>Parma (Aiki Center)</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Contatti</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        <a class="hover:text-dojo-orange" href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a><br>
+        349 159 5885
+      </p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Federazione</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        Associata a <a class="hover:text-dojo-orange" href="https://confederazioneitalianakendo.it/" target="_blank" rel="noopener">C.I.K. Confederazione Italiana Kendo</a><br>
+        ed all'ente di promozione sportiva CSEN.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pb-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-paper-dim/50 border-t border-white/10 pt-6">
+    <a href="privacy.html" class="hover:text-dojo-orange">Privacy</a>
+    <a href="cookie-policy.html" class="hover:text-dojo-orange">Cookie Policy</a>
+  </div>
+</footer>
+
+<div class="pkk-cookie-banner" id="pkk-cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Informativa cookie">
+  <p>Questo sito usa risorse di terze parti (Google Fonts, Maps, Forms) che possono installare cookie tecnici. <a href="cookie-policy.html">Scopri di pi&ugrave;</a>.</p>
+  <button type="button" id="pkk-cookie-accept" class="hero-cta-primary font-display text-sm px-5 py-2.5">Ho capito</button>
+</div>
+
+<button type="button" class="to-top" aria-label="Torna a inizio pagina" hidden>&uarr;</button>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Chiudi immagine">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Costi – Quota & Attrezzatura | Parma Kendo Kai</title>
+<meta name="description" content="Quote associative e costi indicativi dell'attrezzatura da Kendo: gi, hakama, shinai, bokken e bogu.">
+<link rel="icon" href="../images/tiger-logo-icon.webp">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0a0907', panel: '#171310', paper: '#ede6d8',
+        dojo: { orange: '#ff7a1a', red: '#c81e1e', yellow: '#f2b705' }
+      },
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        jp: ['Shippori Mincho', 'serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-ink text-paper font-body antialiased">
+<a class="skip-link" href="#content">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center gap-3" href="../index.html">
+      <img src="../images/tiger-logo-icon.webp" alt="Stemma Parma Kendo Kai" class="h-10 w-10 rounded-full shrink-0 border border-dojo-orange/40">
+      <span class="font-jp text-xl md:text-2xl text-paper leading-none">パルマ剣道会</span>
+      <span class="font-display text-sm md:text-base tracking-wide text-dojo-orange hidden sm:inline">PARMA KENDO KAI</span>
+    </a>
+    <nav class="hidden lg:flex items-center" aria-label="Menu principale">
+      <a class="nav-link px-3 py-2 text-sm" href="../index.html">Home</a><a class="nav-link px-3 py-2 text-sm" href="../galleria.html">Galleria</a><a class="nav-link px-3 py-2 text-sm" href="../corso-bambini.html">Corso Bambini</a><a class="nav-link px-3 py-2 text-sm" href="../principi-del-kendo.html">Principi del Kendo</a><a class="nav-link px-3 py-2 text-sm" href="../modulistica.html">Modulistica</a><a class="nav-link px-3 py-2 text-sm" href="../conan-cup.html">CONAN CUP</a><a class="nav-link px-3 py-2 text-sm" href="../codice-condotta.html">Codice di Condotta</a>
+      
+    <div class="dropdown">
+      <button type="button" class="dropdown-trigger nav-link flex items-center gap-1.5 px-3 py-2 text-sm" aria-expanded="false" aria-haspopup="true" aria-current="page">
+        Contatti &amp; Info
+        <svg class="dropdown-caret w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dropdown-panel">
+        <a href="../contatti-info/dove-quando.html">Dove & Quando</a><a href="../contatti-info/come-iniziare.html">Come iniziare</a><a href="../contatti-info/costi.html" aria-current="page">Costi & Attrezzatura</a><a href="../contatti-info/risorse.html">Risorse</a>
+      </div>
+    </div>
+    </nav>
+    <button type="button" class="nav-toggle lg:hidden text-paper font-display text-sm border border-dojo-orange/40 px-3 py-1.5" aria-expanded="false">
+      MENU
+    </button>
+  </div>
+  <div class="mobile-menu lg:hidden border-t border-white/10">
+    <nav aria-label="Menu principale (mobile)" class="py-2">
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../index.html">Home</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../galleria.html">Galleria</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../corso-bambini.html">Corso Bambini</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../principi-del-kendo.html">Principi del Kendo</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../modulistica.html">Modulistica</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../conan-cup.html">CONAN CUP</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../codice-condotta.html">Codice di Condotta</a>
+      <button type="button" class="mobile-submenu-toggle w-full flex items-center justify-between px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" aria-expanded="false">
+        <span>Contatti &amp; Info</span>
+        <svg class="w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-submenu bg-panel/60">
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/dove-quando.html">Dove & Quando</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/come-iniziare.html">Come iniziare</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/costi.html" aria-current="page">Costi & Attrezzatura</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/risorse.html">Risorse</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page-banner">
+  <span class="page-kanji font-jp" aria-hidden="true">費用</span>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 relative">
+    <h1 class="font-display text-4xl md:text-5xl text-paper mb-3">Costi &ndash; Quota &amp; Attrezzatura</h1>
+    <p class="text-paper-dim max-w-xl">Quanto costa iniziare, davvero.</p>
+  </div>
+</div>
+<div class="max-w-3xl mx-auto px-5 md:px-8 py-16 prose-pkk">
+<h2 class="section-heading">Associarsi e praticare</h2>
+<p>La Parma Kendo Kai a.s.d. <strong>&egrave; un'associazione senza scopo di lucro</strong> e l'insegnante non percepisce alcun compenso o rimborso spese dalle quote: tutto il denaro versato all'associazione viene utilizzato per pagare l'affitto della palestra, le iscrizioni alla federazione, all'ente di promozione sportiva e i canoni del conto corrente.</p>
+<p>L'attivit&agrave; di Parma Kendo Kai asd si rivolge esclusivamente ai propri associati.</p>
+
+<div class="info-panel my-8 not-prose">
+  <h3>Quota 2026&ndash;2027</h3>
+  <p class="text-paper text-2xl font-display mb-0">360&euro; <span class="text-sm text-paper-dim font-body">per entrambi i corsi</span></p>
+</div>
+
+<p>All'atto dell'adesione sar&agrave; necessario portare un certificato per la pratica non agonistica, oppure un certificato medico per la pratica agonistica: quest'ultimo permette inoltre di partecipare alle competizioni organizzate durante l'anno dalla federazione o da altre associazioni.</p>
+
+<h2 class="section-heading">L'attrezzatura</h2>
+<p>Come indicato nella sezione &laquo;Come iniziare&raquo;, l'attrezzatura nei primi mesi viene fornita dall'associazione. Ma quanto costa acquistarne una propria? Quali sono i criteri di scelta? &Egrave; necessario comprare tutto in un'unica soluzione o si pu&ograve; scaglionare gli acquisti dei vari pezzi? Proviamo a rispondere.</p>
+
+<figure class="pkk-figure mb-10">
+  <img src="../images/hakama-gi.webp" alt="Esempio di hakama e gi">
+  <figcaption>Esempio di hakama e gi</figcaption>
+</figure>
+
+<p>Il Kendo si pratica con una divisa specifica: si indossa una casacca (<em>gi</em>) che copre la parte superiore del corpo e dei larghi pantaloni con una serie di pieghe (<em>hakama</em>). Questi indumenti si trovano sul mercato singolarmente oppure in set e sono la prima cosa che si indossa appena si lasciano maglietta e pantaloncini della tuta, dopo le prime lezioni di prova.</p>
+<p>I negozi online offrono una scelta molto ampia per quanto riguarda qualit&agrave; e materiali. Un buon set basico costa fra i 50&euro; e i 90&euro;, con <em>gi</em> in cotone e <em>hakama</em> in tetron. L'attrezzatura ha poi una durata molto lunga: si pu&ograve; tranquillamente praticare con lo stesso set per pi&ugrave; di 6/7 anni prima di avere una reale necessit&agrave; di cambiarlo.</p>
+
+<div class="gallery-grid grid grid-cols-2 gap-2 my-9 not-prose">
+  <img src="../images/shinai.webp" alt="Esempio di shinai" class="aspect-square object-cover w-full">
+  <img src="../images/bokken.webp" alt="Esempio di bokken" class="aspect-square object-cover w-full">
+</div>
+
+<p><em>Shinai</em> &egrave; la spada di bamb&ugrave; con la quale si svolge la maggior parte della pratica: la si usa per gli esercizi di base, per i combattimenti e le gare. Essendo di materiale flessibile permette di colpirsi a vicenda sulle protezioni senza provocare danni. Una <em>shinai</em> per gli allenamenti costa dai 20&euro; ai 45&euro; e, se mantenuta regolarmente, pu&ograve; durare dai 6 mesi a un anno.</p>
+<p><em>Bokken</em> o <em>Bokuto</em> &egrave; una spada in legno pieno di quercia o ciliegio, utilizzata per eseguire i 10 <em>Kata</em> (forme) presenti nel Kendo. Non usurandosi, il suo acquisto (circa 30&euro;) pu&ograve; essere fatto una sola volta.</p>
+<p>Con questi tre elementi abbiamo gi&agrave; tutto quello che serve per i primi mesi di allenamento e anche per gran parte della pratica futura.</p>
+
+<figure class="pkk-figure mb-10">
+  <img src="../images/bogu.webp" alt="Esempio di bogu, l'armatura da Kendo">
+</figure>
+
+<p>L'immagine qui sopra mostra un <em>bogu</em>, l'armatura con la quale ci si allena e che permette di combattere in tutta sicurezza. &Egrave; composta da <em>Men</em> (protezione per il capo), <em>Do</em> (protezione per il busto), <em>Kote</em> (protezioni per mani e polsi) e <em>Tare</em> (protezione per il basso ventre e i fianchi).</p>
+<p>Dopo qualche mese, quando si sono acquisite in modo abbastanza solido le basi, si pu&ograve; cominciare a indossarla. Il nostro approccio &egrave; quello di cominciare dal <em>tare</em> e dal <em>do</em>, per abituarsi a svolgere gli esercizi con due ingombri in pi&ugrave; rispetto alle settimane precedenti; successivamente si passa a indossare anche <em>kote</em> e <em>men</em>.</p>
+<p>Un'armatura completa parte dai 350&euro; in su: gli store online offrono spesso sconti e offerte che permettono di risparmiare o di aggiungere altri componenti all'acquisto.</p>
+</div></main>
+<footer class="site-footer">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid gap-10 sm:grid-cols-3">
+    <div>
+      <p class="font-display text-lg text-paper mb-3">Parma Kendo Kai a.s.d.</p>
+      <p class="text-paper-dim text-sm leading-relaxed">Via San Leonardo 191a<br>Parma (Aiki Center)</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Contatti</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        <a class="hover:text-dojo-orange" href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a><br>
+        349 159 5885
+      </p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Federazione</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        Associata a <a class="hover:text-dojo-orange" href="https://confederazioneitalianakendo.it/" target="_blank" rel="noopener">C.I.K. Confederazione Italiana Kendo</a><br>
+        ed all'ente di promozione sportiva CSEN.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pb-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-paper-dim/50 border-t border-white/10 pt-6">
+    <a href="../privacy.html" class="hover:text-dojo-orange">Privacy</a>
+    <a href="../cookie-policy.html" class="hover:text-dojo-orange">Cookie Policy</a>
+  </div>
+</footer>
+
+<div class="pkk-cookie-banner" id="pkk-cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Informativa cookie">
+  <p>Questo sito usa risorse di terze parti (Google Fonts, Maps, Forms) che possono installare cookie tecnici. <a href="../cookie-policy.html">Scopri di pi&ugrave;</a>.</p>
+  <button type="button" id="pkk-cookie-accept" class="hero-cta-primary font-display text-sm px-5 py-2.5">Ho capito</button>
+</div>
+
+<button type="button" class="to-top" aria-label="Torna a inizio pagina" hidden>&uarr;</button>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Chiudi immagine">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

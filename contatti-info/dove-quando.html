@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dove & Quando | Parma Kendo Kai</title>
+<meta name="description" content="Dove si allena la Parma Kendo Kai a Parma e gli orari dei corsi adulti e bambini.">
+<link rel="icon" href="../images/tiger-logo-icon.webp">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0a0907', panel: '#171310', paper: '#ede6d8',
+        dojo: { orange: '#ff7a1a', red: '#c81e1e', yellow: '#f2b705' }
+      },
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        jp: ['Shippori Mincho', 'serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-ink text-paper font-body antialiased">
+<a class="skip-link" href="#content">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center gap-3" href="../index.html">
+      <img src="../images/tiger-logo-icon.webp" alt="Stemma Parma Kendo Kai" class="h-10 w-10 rounded-full shrink-0 border border-dojo-orange/40">
+      <span class="font-jp text-xl md:text-2xl text-paper leading-none">パルマ剣道会</span>
+      <span class="font-display text-sm md:text-base tracking-wide text-dojo-orange hidden sm:inline">PARMA KENDO KAI</span>
+    </a>
+    <nav class="hidden lg:flex items-center" aria-label="Menu principale">
+      <a class="nav-link px-3 py-2 text-sm" href="../index.html">Home</a><a class="nav-link px-3 py-2 text-sm" href="../galleria.html">Galleria</a><a class="nav-link px-3 py-2 text-sm" href="../corso-bambini.html">Corso Bambini</a><a class="nav-link px-3 py-2 text-sm" href="../principi-del-kendo.html">Principi del Kendo</a><a class="nav-link px-3 py-2 text-sm" href="../modulistica.html">Modulistica</a><a class="nav-link px-3 py-2 text-sm" href="../conan-cup.html">CONAN CUP</a><a class="nav-link px-3 py-2 text-sm" href="../codice-condotta.html">Codice di Condotta</a>
+      
+    <div class="dropdown">
+      <button type="button" class="dropdown-trigger nav-link flex items-center gap-1.5 px-3 py-2 text-sm" aria-expanded="false" aria-haspopup="true" aria-current="page">
+        Contatti &amp; Info
+        <svg class="dropdown-caret w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dropdown-panel">
+        <a href="../contatti-info/dove-quando.html" aria-current="page">Dove & Quando</a><a href="../contatti-info/come-iniziare.html">Come iniziare</a><a href="../contatti-info/costi.html">Costi & Attrezzatura</a><a href="../contatti-info/risorse.html">Risorse</a>
+      </div>
+    </div>
+    </nav>
+    <button type="button" class="nav-toggle lg:hidden text-paper font-display text-sm border border-dojo-orange/40 px-3 py-1.5" aria-expanded="false">
+      MENU
+    </button>
+  </div>
+  <div class="mobile-menu lg:hidden border-t border-white/10">
+    <nav aria-label="Menu principale (mobile)" class="py-2">
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../index.html">Home</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../galleria.html">Galleria</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../corso-bambini.html">Corso Bambini</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../principi-del-kendo.html">Principi del Kendo</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../modulistica.html">Modulistica</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../conan-cup.html">CONAN CUP</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="../codice-condotta.html">Codice di Condotta</a>
+      <button type="button" class="mobile-submenu-toggle w-full flex items-center justify-between px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" aria-expanded="false">
+        <span>Contatti &amp; Info</span>
+        <svg class="w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-submenu bg-panel/60">
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/dove-quando.html" aria-current="page">Dove & Quando</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/come-iniziare.html">Come iniziare</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/costi.html">Costi & Attrezzatura</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="../contatti-info/risorse.html">Risorse</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page-banner">
+  <span class="page-kanji font-jp" aria-hidden="true">場所</span>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 relative">
+    <h1 class="font-display text-4xl md:text-5xl text-paper mb-3">Dove &amp; Quando</h1>
+    <p class="text-paper-dim max-w-xl">Il luogo e gli orari dei nostri allenamenti.</p>
+  </div>
+</div>
+<div class="max-w-3xl mx-auto px-5 md:px-8 py-16 prose-pkk">
+<h2 class="section-heading">Dove si trova il luogo di pratica</h2>
+<p>Il corso adulti e il corso bambini-ragazzi si svolgono a Parma negli spazi dell'<strong>Aiki Center</strong>, in Via San Leonardo 191a.</p>
+
+<figure class="pkk-figure mb-10">
+  <img src="../images/dove-1.webp" alt="Ingresso della palestra Aiki Center">
+</figure>
+
+<div class="map-consent not-prose" id="pkk-map-consent" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1744.393042620377!2d10.340512033165542!3d44.834950018994085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47806bb9a919e16d:0xf02d43684efd83c3!2sParma%20Kendo%20Kai%20A.S.D.!5e1!3m2!1sen!2sit" data-map-title="Mappa Aiki Center, Via San Leonardo 191a, Parma">
+  <p class="text-paper-dim text-sm mb-3">Qui sotto puoi caricare la mappa di Google Maps. Caricandola, il tuo browser scambia dati con i server di Google (vedi la nostra <a href="../privacy.html">Privacy &amp; Cookie Policy</a>).</p>
+  <button type="button" class="hero-cta-ghost font-display text-sm px-5 py-2.5" id="pkk-map-load-btn">Carica la mappa di Google</button>
+</div>
+
+<h2 class="section-heading">Quando</h2>
+<table class="schedule not-prose">
+  <tr><th>Corso</th><th>Giorni</th><th>Orario</th></tr>
+  <tr><td>Adulti</td><td>Luned&igrave; e mercoled&igrave;</td><td>20:00 &ndash; 21:30</td></tr>
+  <tr><td>Bambini &ndash; Ragazzi</td><td>Mercoled&igrave; e venerd&igrave;</td><td>17:30 &ndash; 18:30</td></tr>
+</table>
+
+<div class="info-panel my-10 not-prose">
+  <h3>Stagione 2026/2027</h3>
+  <p class="text-paper-dim text-sm mb-0">Luned&igrave; 7 settembre: inizio corso adulti<br>
+  Mercoled&igrave; 30 settembre: inizio corso bambini</p>
+</div>
+
+<p>La via in cui si trova la palestra offre parcheggio sia ad automobili che a motorini.</p>
+</div></main>
+<footer class="site-footer">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid gap-10 sm:grid-cols-3">
+    <div>
+      <p class="font-display text-lg text-paper mb-3">Parma Kendo Kai a.s.d.</p>
+      <p class="text-paper-dim text-sm leading-relaxed">Via San Leonardo 191a<br>Parma (Aiki Center)</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Contatti</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        <a class="hover:text-dojo-orange" href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a><br>
+        349 159 5885
+      </p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Federazione</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        Associata a <a class="hover:text-dojo-orange" href="https://confederazioneitalianakendo.it/" target="_blank" rel="noopener">C.I.K. Confederazione Italiana Kendo</a><br>
+        ed all'ente di promozione sportiva CSEN.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pb-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-paper-dim/50 border-t border-white/10 pt-6">
+    <a href="../privacy.html" class="hover:text-dojo-orange">Privacy</a>
+    <a href="../cookie-policy.html" class="hover:text-dojo-orange">Cookie Policy</a>
+  </div>
+</footer>
+
+<div class="pkk-cookie-banner" id="pkk-cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Informativa cookie">
+  <p>Questo sito usa risorse di terze parti (Google Fonts, Maps, Forms) che possono installare cookie tecnici. <a href="../cookie-policy.html">Scopri di pi&ugrave;</a>.</p>
+  <button type="button" id="pkk-cookie-accept" class="hero-cta-primary font-display text-sm px-5 py-2.5">Ho capito</button>
+</div>
+
+<button type="button" class="to-top" aria-label="Torna a inizio pagina" hidden>&uarr;</button>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Chiudi immagine">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

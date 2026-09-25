@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONAN CUP | Parma Kendo Kai</title>
+<meta name="description" content="La Conan Cup, competizione interna di Kendo della Parma Kendo Kai: regolamento, categorie e risultati.">
+<link rel="icon" href="images/tiger-logo-icon.webp">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0a0907', panel: '#171310', paper: '#ede6d8',
+        dojo: { orange: '#ff7a1a', red: '#c81e1e', yellow: '#f2b705' }
+      },
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        jp: ['Shippori Mincho', 'serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-ink text-paper font-body antialiased">
+<a class="skip-link" href="#content">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center gap-3" href="index.html">
+      <img src="images/tiger-logo-icon.webp" alt="Stemma Parma Kendo Kai" class="h-10 w-10 rounded-full shrink-0 border border-dojo-orange/40">
+      <span class="font-jp text-xl md:text-2xl text-paper leading-none">パルマ剣道会</span>
+      <span class="font-display text-sm md:text-base tracking-wide text-dojo-orange hidden sm:inline">PARMA KENDO KAI</span>
+    </a>
+    <nav class="hidden lg:flex items-center" aria-label="Menu principale">
+      <a class="nav-link px-3 py-2 text-sm" href="index.html">Home</a><a class="nav-link px-3 py-2 text-sm" href="galleria.html">Galleria</a><a class="nav-link px-3 py-2 text-sm" href="corso-bambini.html">Corso Bambini</a><a class="nav-link px-3 py-2 text-sm" href="principi-del-kendo.html">Principi del Kendo</a><a class="nav-link px-3 py-2 text-sm" href="modulistica.html">Modulistica</a><a class="nav-link px-3 py-2 text-sm" href="conan-cup.html" aria-current="page">CONAN CUP</a><a class="nav-link px-3 py-2 text-sm" href="codice-condotta.html">Codice di Condotta</a>
+      
+    <div class="dropdown">
+      <button type="button" class="dropdown-trigger nav-link flex items-center gap-1.5 px-3 py-2 text-sm" aria-expanded="false" aria-haspopup="true">
+        Contatti &amp; Info
+        <svg class="dropdown-caret w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dropdown-panel">
+        <a href="contatti-info/dove-quando.html">Dove & Quando</a><a href="contatti-info/come-iniziare.html">Come iniziare</a><a href="contatti-info/costi.html">Costi & Attrezzatura</a><a href="contatti-info/risorse.html">Risorse</a>
+      </div>
+    </div>
+    </nav>
+    <button type="button" class="nav-toggle lg:hidden text-paper font-display text-sm border border-dojo-orange/40 px-3 py-1.5" aria-expanded="false">
+      MENU
+    </button>
+  </div>
+  <div class="mobile-menu lg:hidden border-t border-white/10">
+    <nav aria-label="Menu principale (mobile)" class="py-2">
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="index.html">Home</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="galleria.html">Galleria</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="corso-bambini.html">Corso Bambini</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="principi-del-kendo.html">Principi del Kendo</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="modulistica.html">Modulistica</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="conan-cup.html" aria-current="page">CONAN CUP</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="codice-condotta.html">Codice di Condotta</a>
+      <button type="button" class="mobile-submenu-toggle w-full flex items-center justify-between px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" aria-expanded="false">
+        <span>Contatti &amp; Info</span>
+        <svg class="w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-submenu bg-panel/60">
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/dove-quando.html">Dove & Quando</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/come-iniziare.html">Come iniziare</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/costi.html">Costi & Attrezzatura</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/risorse.html">Risorse</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page-banner">
+  <span class="page-kanji font-jp" aria-hidden="true">大会</span>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 relative">
+    <h1 class="font-display text-4xl md:text-5xl text-paper mb-3">CONAN CUP</h1>
+    <p class="text-paper-dim max-w-xl">La competizione interna della Parma Kendo Kai.</p>
+  </div>
+</div>
+<div class="max-w-3xl mx-auto px-5 md:px-8 py-16 prose-pkk">
+<figure class="pkk-figure mb-10">
+  <img src="images/conan-hero.webp" alt="Immagine di gruppo Conan Cup">
+</figure>
+
+<h2 class="section-heading">Che cos'&egrave;?</h2>
+<p>La Conan Cup &egrave; la competizione (individuali e squadre) interna della Parma Kendo Kai. Si tiene nel mese di dicembre.</p>
+
+<h2 class="section-heading">Organizzazione</h2>
+<p>Negli anni pari si svolge la gara a squadre, in quelli dispari quella individuale.</p>
+
+<h3 class="font-display text-paper mt-8 mb-3">Categorie gara individuale</h3>
+<div class="flex flex-wrap gap-2 not-prose mb-6">
+  <span class="badge-cat">Valle dei Cuccioli</span>
+  <span class="badge-cat">Accademia dei Lividi</span>
+  <span class="badge-cat">Tana delle Tigri</span>
+</div>
+<p>Dai neofiti che hanno appena messo l'armatura (Valle dei Cuccioli), a chi &egrave; da poco nel mondo dello shiai (Accademia dei Lividi), fino ai pi&ugrave; esperti con anni di gare alle spalle (Tana delle Tigri).</p>
+
+<h3 class="font-display text-paper mt-8 mb-3">Categorie gara a squadre</h3>
+<div class="flex flex-wrap gap-2 not-prose mb-6">
+  <span class="badge-cat">Blue Tornado con Schiaffoni</span>
+  <span class="badge-cat">Brucomela con Abbracci</span>
+</div>
+<p>Esperti e praticanti di medio livello nella prima, chi &egrave; alle prime armi o ha pochi mesi di pratica nella seconda.</p>
+
+<blockquote class="kquote">KOTEEEEEEEE!!!! &mdash; Conan il Barbaro, PKK Version</blockquote>
+
+<h2 class="section-heading">Regolamento (sintesi)</h2>
+<p><strong>Sistema a pool</strong>: le squadre vengono suddivise in pool da 3 (con eventuali pool da 2 o 4 per i resti). Tempo di gara: 2 minuti per ogni incontro individuale; se non si ottiene un risultato entro il tempo assegnato, l'incontro &egrave; dichiarato in pareggio.</p>
+<p>La squadra vincente in pool si determina in base a: numero di vittorie individuali &rarr; punti fatti &rarr; ippon fatti &rarr; eventuale spareggio (ippon-shobu senza limiti di tempo).</p>
+<p>Punteggio: vittoria di squadra 3 punti, pareggio 1 punto, sconfitta 0 punti. Le due squadre con pi&ugrave; punti accedono alla fase finale.</p>
+<p><strong>Tabellone ad eliminazione diretta</strong>: semifinali e finale durano 3 minuti; in caso di parit&agrave; si procede come sopra, fino a un eventuale spareggio.</p>
+<p>Nella categoria Valle dei Cuccioli si esegue uchikomi geiko, giudicato con Hantei.</p>
+
+<h2 class="section-heading">La maglietta</h2>
+<p>A ciascuna edizione la sua maglietta, rigorosamente <em>@biacca design</em>.</p>
+<figure class="pkk-figure mb-10">
+  <img src="images/conan-maglietta.webp" alt="Maglietta ufficiale Conan Cup">
+</figure>
+
+<hr class="border-white/10 my-14">
+
+<h2 class="section-heading">Risultati edizione 2024</h2>
+<figure class="pkk-figure mb-10">
+  <img src="images/conan-2024-risultati.webp" alt="Tabellone risultati Conan Cup 2024">
+</figure>
+
+<div class="grid sm:grid-cols-2 gap-10 not-prose">
+  <div>
+    <h3 class="font-display text-paper mb-2">Blu Tornado degli Schiaffoni</h3>
+    <ol class="not-prose list-none p-0 m-0"><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">1&deg;</span><span class="text-paper-dim text-sm">Le Bimbe di Moretti &mdash; Grandi, Pesci, Bracciali</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">2&deg;</span><span class="text-paper-dim text-sm">I guerrieri della nebbia &mdash; Bergamin, Rossi, Noci</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">3&deg;</span><span class="text-paper-dim text-sm">Noticed by Sempai &mdash; Paterlini, Biacca, Valentini</span></li></ol>
+  </div>
+  <div>
+    <h3 class="font-display text-paper mb-2">Brucomela con Abbracci</h3>
+    <ol class="not-prose list-none p-0 m-0"><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">1&deg;</span><span class="text-paper-dim text-sm">Otamajakushi</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">2&deg;</span><span class="text-paper-dim text-sm">I Tanuki</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">3&deg;</span><span class="text-paper-dim text-sm">Men o Male</span></li></ol>
+  </div>
+</div>
+
+<hr class="border-white/10 my-14">
+
+<h2 class="section-heading">Risultati edizione 2023</h2>
+<div class="grid sm:grid-cols-3 gap-8 not-prose mb-10">
+  <div>
+    <h3 class="font-display text-paper mb-2">Tana delle Tigri</h3>
+    <ol class="not-prose list-none p-0 m-0"><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">1&deg;</span><span class="text-paper-dim text-sm">Ghirardini</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">2&deg;</span><span class="text-paper-dim text-sm">Tabellini</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">3&deg;</span><span class="text-paper-dim text-sm">Paterlini</span></li></ol>
+  </div>
+  <div>
+    <h3 class="font-display text-paper mb-2">Accademia dei Lividi</h3>
+    <ol class="not-prose list-none p-0 m-0"><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">1&deg;</span><span class="text-paper-dim text-sm">Biacca</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">2&deg;</span><span class="text-paper-dim text-sm">Negri</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">3&deg;</span><span class="text-paper-dim text-sm">Guarnieri</span></li></ol>
+  </div>
+  <div>
+    <h3 class="font-display text-paper mb-2">Valle dei Cuccioli</h3>
+    <ol class="not-prose list-none p-0 m-0"><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">1&deg;</span><span class="text-paper-dim text-sm">Frisone</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">2&deg;</span><span class="text-paper-dim text-sm">Caravaggio</span></li><li class="flex items-baseline gap-3 py-2 border-b border-white/10"><span class="font-display text-dojo-yellow w-6">3&deg;</span><span class="text-paper-dim text-sm">Cappellaro</span></li></ol>
+  </div>
+</div>
+
+<figure class="pkk-figure mb-10">
+  <img src="images/conan-2023-gruppo.webp" alt="Foto di gruppo, partecipanti Conan Cup 2023">
+  <figcaption>Partecipanti alla Conan Cup 2023</figcaption>
+</figure>
+
+<h3 class="font-display text-paper mt-10 mb-3">Statistiche edizione 2023</h3>
+<div class="grid gap-3 not-prose mb-10">
+<a class="doc-card" href="documenti/stats-tana-delle-tigri.pdf">
+    <svg class="w-5 h-5 text-dojo-orange shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.6"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6"/></svg>
+    <span class="text-sm">Statistiche &ndash; Tana delle Tigri</span>
+  </a>
+  <a class="doc-card" href="documenti/stats-accademia-dei-lividi.pdf">
+    <svg class="w-5 h-5 text-dojo-orange shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.6"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6"/></svg>
+    <span class="text-sm">Statistiche &ndash; Accademia dei Lividi</span>
+  </a>
+  <a class="doc-card" href="documenti/stats-valle-dei-cuccioli.pdf">
+    <svg class="w-5 h-5 text-dojo-orange shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="currentColor" stroke-width="1.6"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6"/></svg>
+    <span class="text-sm">Statistiche &ndash; Valle dei Cuccioli</span>
+  </a>
+</div>
+
+<p>Ci vediamo alla prossima Conan Cup!</p>
+</div></main>
+<footer class="site-footer">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid gap-10 sm:grid-cols-3">
+    <div>
+      <p class="font-display text-lg text-paper mb-3">Parma Kendo Kai a.s.d.</p>
+      <p class="text-paper-dim text-sm leading-relaxed">Via San Leonardo 191a<br>Parma (Aiki Center)</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Contatti</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        <a class="hover:text-dojo-orange" href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a><br>
+        349 159 5885
+      </p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Federazione</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        Associata a <a class="hover:text-dojo-orange" href="https://confederazioneitalianakendo.it/" target="_blank" rel="noopener">C.I.K. Confederazione Italiana Kendo</a><br>
+        ed all'ente di promozione sportiva CSEN.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pb-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-paper-dim/50 border-t border-white/10 pt-6">
+    <a href="privacy.html" class="hover:text-dojo-orange">Privacy</a>
+    <a href="cookie-policy.html" class="hover:text-dojo-orange">Cookie Policy</a>
+  </div>
+</footer>
+
+<div class="pkk-cookie-banner" id="pkk-cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Informativa cookie">
+  <p>Questo sito usa risorse di terze parti (Google Fonts, Maps, Forms) che possono installare cookie tecnici. <a href="cookie-policy.html">Scopri di pi&ugrave;</a>.</p>
+  <button type="button" id="pkk-cookie-accept" class="hero-cta-primary font-display text-sm px-5 py-2.5">Ho capito</button>
+</div>
+
+<button type="button" class="to-top" aria-label="Torna a inizio pagina" hidden>&uarr;</button>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Chiudi immagine">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

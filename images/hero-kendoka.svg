@@ -1,0 +1,45 @@
+<svg viewBox="0 0 600 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrazione di un kendoka in posizione di guardia con shinai alzato">
+  <defs>
+    <linearGradient id="pkkFigGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff7a1a"/>
+      <stop offset="55%" stop-color="#e8590c"/>
+      <stop offset="100%" stop-color="#c81e1e"/>
+    </linearGradient>
+    <radialGradient id="pkkGlow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="330" cy="230" rx="230" ry="230" fill="url(#pkkGlow)"/>
+
+  <!-- shinai alzato -->
+  <rect x="418" y="30" width="10" height="330" rx="3" fill="url(#pkkFigGrad)" transform="rotate(18 423 195)"/>
+  <rect x="404" y="24" width="38" height="14" rx="2" fill="#f2b705" transform="rotate(18 423 31)"/>
+
+  <!-- men (maschera) -->
+  <path d="M300 150c-40 0-72 30-72 70 0 34 20 60 48 70l4 26h40l4-26c28-10 48-36 48-70 0-40-32-70-72-70z" fill="url(#pkkFigGrad)"/>
+  <rect x="262" y="205" width="76" height="8" fill="#0a0907" opacity="0.55"/>
+  <rect x="262" y="222" width="76" height="8" fill="#0a0907" opacity="0.55"/>
+  <rect x="262" y="239" width="76" height="8" fill="#0a0907" opacity="0.55"/>
+  <path d="M270 150c-16-30-6-60 30-60s46 30 30 60" fill="none" stroke="url(#pkkFigGrad)" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- busto / do -->
+  <path d="M220 320c-10 60-14 120 6 176 30 20 148 20 178 0 20-56 16-116 6-176-30-24-160-24-190 0z" fill="url(#pkkFigGrad)"/>
+  <path d="M240 330c40 18 140 18 180 0" fill="none" stroke="#0a0907" stroke-opacity="0.4" stroke-width="6"/>
+  <path d="M232 380c46 20 150 20 196 0" fill="none" stroke="#0a0907" stroke-opacity="0.3" stroke-width="5"/>
+  <path d="M228 430c50 20 154 20 204 0" fill="none" stroke="#0a0907" stroke-opacity="0.3" stroke-width="5"/>
+
+  <!-- braccio destro alzato verso lo shinai -->
+  <path d="M350 300c40-20 70-60 78-120l26 8c-8 68-42 118-90 144z" fill="url(#pkkFigGrad)"/>
+  <!-- braccio sinistro in guardia bassa -->
+  <path d="M232 340c-34 24-54 60-58 104l-28-4c4-56 30-100 70-128z" fill="url(#pkkFigGrad)"/>
+
+  <!-- hakama -->
+  <path d="M196 486c-14 90-24 168-10 244l52 6 20-150 44 150h58l22-150 20 150 52-6c14-76 4-154-10-244-56-26-192-26-248 0z" fill="url(#pkkFigGrad)"/>
+  <path d="M300 486v244" stroke="#0a0907" stroke-opacity="0.35" stroke-width="6"/>
+
+  <!-- piedi -->
+  <path d="M236 726c-18 8-30 22-32 34h64c2-14-6-28-20-34z" fill="url(#pkkFigGrad)"/>
+  <path d="M372 726c18 8 30 22 32 34h-64c-2-14 6-28 20-34z" fill="url(#pkkFigGrad)"/>
+</svg>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Principi del Kendo | Parma Kendo Kai</title>
+<meta name="description" content="I principi del Kendô secondo i documenti ufficiali della Zen Nippon Kendo Renmei (ZNKR / AJKF).">
+<link rel="icon" href="images/tiger-logo-icon.webp">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0a0907', panel: '#171310', paper: '#ede6d8',
+        dojo: { orange: '#ff7a1a', red: '#c81e1e', yellow: '#f2b705' }
+      },
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        jp: ['Shippori Mincho', 'serif']
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-ink text-paper font-body antialiased">
+<a class="skip-link" href="#content">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a class="flex items-center gap-3" href="index.html">
+      <img src="images/tiger-logo-icon.webp" alt="Stemma Parma Kendo Kai" class="h-10 w-10 rounded-full shrink-0 border border-dojo-orange/40">
+      <span class="font-jp text-xl md:text-2xl text-paper leading-none">パルマ剣道会</span>
+      <span class="font-display text-sm md:text-base tracking-wide text-dojo-orange hidden sm:inline">PARMA KENDO KAI</span>
+    </a>
+    <nav class="hidden lg:flex items-center" aria-label="Menu principale">
+      <a class="nav-link px-3 py-2 text-sm" href="index.html">Home</a><a class="nav-link px-3 py-2 text-sm" href="galleria.html">Galleria</a><a class="nav-link px-3 py-2 text-sm" href="corso-bambini.html">Corso Bambini</a><a class="nav-link px-3 py-2 text-sm" href="principi-del-kendo.html" aria-current="page">Principi del Kendo</a><a class="nav-link px-3 py-2 text-sm" href="modulistica.html">Modulistica</a><a class="nav-link px-3 py-2 text-sm" href="conan-cup.html">CONAN CUP</a><a class="nav-link px-3 py-2 text-sm" href="codice-condotta.html">Codice di Condotta</a>
+      
+    <div class="dropdown">
+      <button type="button" class="dropdown-trigger nav-link flex items-center gap-1.5 px-3 py-2 text-sm" aria-expanded="false" aria-haspopup="true">
+        Contatti &amp; Info
+        <svg class="dropdown-caret w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="dropdown-panel">
+        <a href="contatti-info/dove-quando.html">Dove & Quando</a><a href="contatti-info/come-iniziare.html">Come iniziare</a><a href="contatti-info/costi.html">Costi & Attrezzatura</a><a href="contatti-info/risorse.html">Risorse</a>
+      </div>
+    </div>
+    </nav>
+    <button type="button" class="nav-toggle lg:hidden text-paper font-display text-sm border border-dojo-orange/40 px-3 py-1.5" aria-expanded="false">
+      MENU
+    </button>
+  </div>
+  <div class="mobile-menu lg:hidden border-t border-white/10">
+    <nav aria-label="Menu principale (mobile)" class="py-2">
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="index.html">Home</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="galleria.html">Galleria</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="corso-bambini.html">Corso Bambini</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="principi-del-kendo.html" aria-current="page">Principi del Kendo</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="modulistica.html">Modulistica</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="conan-cup.html">CONAN CUP</a>
+      <a class="block px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" href="codice-condotta.html">Codice di Condotta</a>
+      <button type="button" class="mobile-submenu-toggle w-full flex items-center justify-between px-5 py-3 font-display text-paper-dim hover:text-dojo-orange" aria-expanded="false">
+        <span>Contatti &amp; Info</span>
+        <svg class="w-3 h-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-submenu bg-panel/60">
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/dove-quando.html">Dove & Quando</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/come-iniziare.html">Come iniziare</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/costi.html">Costi & Attrezzatura</a>
+        <a class="block px-5 py-2.5 text-sm text-paper-dim hover:text-dojo-orange" href="contatti-info/risorse.html">Risorse</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page-banner">
+  <span class="page-kanji font-jp" aria-hidden="true">理法</span>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-16 md:py-20 relative">
+    <h1 class="font-display text-4xl md:text-5xl text-paper mb-3">I Principi del Kend&ocirc;</h1>
+    <p class="text-paper-dim max-w-xl">Dai documenti ufficiali Zen Nippon Kendo Renmei (ZNKR) &mdash; All Japan Kendo Federation (AJKF).</p>
+  </div>
+</div>
+<div class="max-w-3xl mx-auto px-5 md:px-8 py-16 prose-pkk">
+<p>Kend&ocirc; &egrave; un modo di vita qualificato dalla ricerca della perfezione come essere umano attraverso l'addestramento nei principi dell'arte del maneggio della spada giapponese.</p>
+
+<div class="not-prose mt-10">
+<div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">01</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Ningen-keisei</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; la ricerca della perfezione di mente e di corpo come essere umano. Divenire un essere umano eccellente attraverso il Kend&ocirc; &egrave; la meta ultima del Kend&ocirc;.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">02</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Shugy&ocirc;</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; l'addestramento nei principi dell'arte del maneggio della spada giapponese. Il processo di rigoroso addestramento e affinamento della mente e del corpo richiede la continuit&agrave; della pratica ed &egrave; legato al modo di vita e alla creazione di un nuovo s&eacute;.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">03</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Ri-h&ocirc;</h3>
+      <p class="text-paper-dim text-sm mb-0">Sono i principi dell'arte del maneggio della spada giapponese: indicano il modo in cui sforzarsi di realizzare il corretto movimento d'attacco, armonicamente e con la corretta attitudine mentale, postura e pienezza di spirito.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">04</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Waza</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; l'arte del maneggio della spada giapponese: un movimento d'attacco dotato di forma tipica in cui si manifesta una capacit&agrave; motoria acquisita attraverso un lungo e duro addestramento.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">05</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Keiko</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; la pratica dell'arte del maneggio della spada giapponese. Non indica semplicemente la ripetizione, ma include l'importanza dell'attitudine nei confronti dell'arte praticata. Keiko inizia e finisce con Rei-h&ocirc; e comprende Kata-geiko e Keiko-h&ocirc;.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">06</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Kata-geiko</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; la pratica della sola forma: l'insegnamento e l'apprendimento di Waza da parte di Uchidachi e Shidachi, per apprendere con il corpo i vari Waza e comprenderne il significato spirituale.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">07</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Keiko-h&ocirc;</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; il metodo di apprendimento del modo di esecuzione di Waza, fondato sulla presenza di Motodachi. Include Kihon-geiko, Gokaku-geiko (Ji-geiko), Hikitate-geiko, Shiai-geiko e forme speciali come Kan-geiko e Gasshuku-geiko.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">08</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Shi-ai</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; la competizione tra due contendenti per Y&ucirc;k&ocirc; Datotsu. Shin-pan &egrave; la decisione sull'esito dello Shi-ai secondo lo Shinpan-h&ocirc;.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">09</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Shin-sa</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; l'attestazione del livello raggiunto nell'addestramento: l'esame che decide se promuovere o meno il candidato a un rango pi&ugrave; elevato (Dan-to-ky&ucirc;).</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">10</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Ippon</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; l'esecuzione di Waza che raggiunge il proprio scopo: il colpo valido eseguito con Ki-ken-tai-itchi, quando spirito, maneggio dello Shinai e movimento del corpo si accordano con la corretta tempestivit&agrave;.</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 grid sm:grid-cols-[3rem_1fr] gap-3 sm:gap-6">
+    <span class="font-display text-dojo-orange/70 text-2xl">11</span>
+    <div>
+      <h3 class="font-display text-paper mb-2">Y&ucirc;k&ocirc; Datotsu</h3>
+      <p class="text-paper-dim text-sm mb-0">&Egrave; l'esecuzione di un colpo valido: Waza eseguito nella sua completezza, con pienezza di spirito, postura appropriata, corretto Ha-suji ed espressione di Zan-shin.</p>
+    </div>
+  </div>
+</div>
+
+<p class="text-sm text-paper-dim/60 mt-12">(testo tratto dallo Statuto della Confederazione Italiana Kendo C.I.K.)</p>
+</div></main>
+<footer class="site-footer">
+  <div class="max-w-6xl mx-auto px-5 md:px-8 py-14 grid gap-10 sm:grid-cols-3">
+    <div>
+      <p class="font-display text-lg text-paper mb-3">Parma Kendo Kai a.s.d.</p>
+      <p class="text-paper-dim text-sm leading-relaxed">Via San Leonardo 191a<br>Parma (Aiki Center)</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Contatti</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        <a class="hover:text-dojo-orange" href="mailto:parmakendokai@libero.it">parmakendokai@libero.it</a><br>
+        349 159 5885
+      </p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-dojo-orange mb-3">Federazione</p>
+      <p class="text-paper-dim text-sm leading-relaxed">
+        Associata a <a class="hover:text-dojo-orange" href="https://confederazioneitalianakendo.it/" target="_blank" rel="noopener">C.I.K. Confederazione Italiana Kendo</a><br>
+        ed all'ente di promozione sportiva CSEN.
+      </p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 md:px-8 pb-8 flex flex-wrap gap-x-6 gap-y-2 text-xs text-paper-dim/50 border-t border-white/10 pt-6">
+    <a href="privacy.html" class="hover:text-dojo-orange">Privacy</a>
+    <a href="cookie-policy.html" class="hover:text-dojo-orange">Cookie Policy</a>
+  </div>
+</footer>
+
+<div class="pkk-cookie-banner" id="pkk-cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Informativa cookie">
+  <p>Questo sito usa risorse di terze parti (Google Fonts, Maps, Forms) che possono installare cookie tecnici. <a href="cookie-policy.html">Scopri di pi&ugrave;</a>.</p>
+  <button type="button" id="pkk-cookie-accept" class="hero-cta-primary font-display text-sm px-5 py-2.5">Ho capito</button>
+</div>
+
+<button type="button" class="to-top" aria-label="Torna a inizio pagina" hidden>&uarr;</button>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Chiudi immagine">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

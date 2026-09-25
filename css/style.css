@@ -1,0 +1,365 @@
+/* ============================================================
+   Parma Kendo Kai — livello custom sopra Tailwind
+   Nero/arancione (colori del dojo), rosso/giallo come accenti.
+   Un solo segno grafico ricorrente: il taglio diagonale (fendente).
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=Shippori+Mincho:wght@600;700&display=swap');
+
+:root{
+  --ink: #0a0907;
+  --panel: #171310;
+  --panel-2: #211b15;
+  --paper: #ede6d8;
+  --paper-dim: #b6ac99;
+  --orange: #ff7a1a;
+  --orange-deep: #e8590c;
+  --red: #c81e1e;
+  --yellow: #f2b705;
+  --line: rgba(237, 230, 216, 0.12);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html{ scroll-behavior: smooth; }
+body{
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+
+.font-display{ font-family: 'Oswald', sans-serif; }
+.font-jp{ font-family: 'Shippori Mincho', serif; }
+
+/* salta al contenuto */
+.skip-link{
+  position: absolute; left: -999px; top: auto;
+  background: var(--orange); color: #0a0907; font-weight: 700;
+  padding: 10px 16px; z-index: 300;
+}
+.skip-link:focus{ left: 12px; top: 12px; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible{
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* ---------- Header / nav ---------- */
+.site-header{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10, 9, 7, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  transition: border-color .2s ease;
+}
+.site-header.is-stuck{ border-color: rgba(255,122,26,0.35); }
+
+/* menu in alto: da 1024px le voci stanno su una riga propria, centrata.
+   Senza questo restavano piegate su due righe e spostate a destra. */
+@media (min-width: 1024px){
+  .site-header > div{
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .site-header > div > nav{ flex-wrap: nowrap; }
+  /* il pannello "Contatti & Info" si apre verso sinistra, cosi' non esce dal bordo */
+  .site-header .dropdown-panel{ left: auto; right: 0; }
+}
+
+.nav-link{
+  position: relative;
+  color: var(--paper-dim);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color .15s ease;
+}
+.nav-link::after{
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -4px;
+  height: 2px; background: var(--orange);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .25s var(--ease);
+}
+.nav-link:hover{ color: var(--paper); }
+.nav-link:hover::after, .nav-link[aria-current="page"]::after{ transform: scaleX(1); }
+.nav-link[aria-current="page"]{ color: #fff; }
+
+/* dropdown "Contatti & Info" */
+.dropdown{ position: relative; }
+.dropdown-panel{
+  position: absolute; top: calc(100% + 10px); left: 0;
+  min-width: 230px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--orange);
+  box-shadow: 0 20px 40px -18px rgba(0,0,0,0.7);
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s var(--ease), visibility .18s;
+  z-index: 50;
+}
+.dropdown:hover .dropdown-panel,
+.dropdown:focus-within .dropdown-panel,
+.dropdown.is-open .dropdown-panel{
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.dropdown-panel a{
+  display: block; padding: 11px 16px;
+  color: var(--paper-dim); font-size: 0.92rem;
+  border-bottom: 1px solid var(--line);
+}
+.dropdown-panel a:last-child{ border-bottom: none; }
+.dropdown-panel a:hover{ background: var(--panel-2); color: var(--orange); }
+.dropdown-caret{ transition: transform .2s var(--ease); }
+.dropdown:hover .dropdown-caret, .dropdown.is-open .dropdown-caret{ transform: rotate(180deg); }
+
+/* menu mobile */
+.mobile-menu{
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height .35s var(--ease), opacity .25s ease;
+}
+.mobile-menu.open{ max-height: 700px; opacity: 1; }
+.mobile-submenu{ max-height: 0; overflow: hidden; transition: max-height .3s var(--ease); }
+.mobile-submenu.open{ max-height: 400px; }
+
+/* ---------- Hero (home) ---------- */
+.hero{
+  position: relative;
+  min-height: min(92vh, 780px);
+  overflow: hidden;
+  display: flex; align-items: center;
+  background: var(--ink);
+}
+/* su telefono il riquadro era troppo alto per la striscia: si vedeva solo il 22%
+   della larghezza e restava fuori una testa. Piu' basso = piu' immagine in vista. */
+@media (max-width: 767px){
+  .hero{ min-height: min(62vh, 520px); }
+}
+.hero-bg{
+  position: absolute; inset: 0;
+  transition: opacity .15s linear, transform .15s linear;
+  will-change: opacity, transform;
+  transform-origin: center 30%;
+}
+.hero-bg img{
+  width: 100%; height: 100%; object-fit: cover; object-position: center 28%;
+  filter: saturate(0.88) contrast(1.08) brightness(0.82);
+}
+.hero-tiger{
+  position: absolute; right: -8%; top: 50%; transform: translateY(-50%);
+  width: min(52vw, 560px); opacity: 0.26;
+  filter: drop-shadow(0 0 40px rgba(255,122,26,0.15)) grayscale(0.15);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-overlay{
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10,9,7,0.88) 0%, rgba(10,9,7,0.45) 42%, rgba(10,9,7,0.2) 65%, rgba(10,9,7,0.55) 100%),
+    linear-gradient(180deg, rgba(10,9,7,0.15) 0%, rgba(10,9,7,0.3) 55%, var(--ink) 100%);
+}
+@media (prefers-reduced-motion: reduce){ .hero-bg{ transition: none !important; } }
+.hero-content{
+  transition: opacity .15s linear, transform .15s linear;
+  will-change: opacity, transform;
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-content{ transition: none !important; opacity: 1 !important; transform: none !important; }
+}
+.hero-cta-primary{
+  background: var(--orange); color: #0a0907;
+  transition: background .18s ease, transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.hero-cta-primary:hover{ background: #fff; transform: translateY(-2px); box-shadow: 0 14px 30px -14px rgba(255,122,26,0.6); }
+.hero-cta-ghost{
+  border: 1px solid rgba(237,230,216,0.35); color: var(--paper);
+  transition: border-color .18s ease, background .18s ease;
+}
+.hero-cta-ghost:hover{ border-color: var(--orange); background: rgba(255,122,26,0.08); }
+
+.scroll-cue{
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+  color: var(--paper-dim); font-family: 'Oswald', sans-serif; font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.scroll-cue-line{ width: 1px; height: 34px; background: linear-gradient(var(--orange), transparent); animation: cue-pulse 1.8s ease-in-out infinite; }
+@keyframes cue-pulse{ 0%,100%{ opacity: 0.35; } 50%{ opacity: 1; } }
+@media (prefers-reduced-motion: reduce){ .scroll-cue-line{ animation: none; } }
+
+/* il fendente: unico segno diagonale ricorrente, tra hero e contenuto
+   o come sfondo delle testate di pagina interne */
+.slash-divider{
+  position: relative; height: 64px;
+  background: var(--ink);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+.slash-divider::before{
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, var(--red), var(--orange) 55%, var(--yellow));
+  clip-path: polygon(0 100%, 100% 0, 100% 6%, 6% 100%);
+}
+
+.page-banner{
+  position: relative;
+  background: linear-gradient(160deg, var(--panel) 0%, var(--ink) 70%);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.page-banner::after{
+  content: "";
+  position: absolute; right: -6%; top: -30%;
+  width: 55%; height: 220%;
+  background: linear-gradient(100deg, transparent, rgba(255,122,26,0.10) 45%, transparent 60%);
+  transform: rotate(-14deg);
+  pointer-events: none;
+}
+.page-kanji{
+  font-family: 'Shippori Mincho', serif;
+  color: transparent; -webkit-text-stroke: 1px rgba(255,122,26,0.16);
+  position: absolute; right: 4%; bottom: -0.15em; font-size: min(22vw, 220px);
+  line-height: 1; user-select: none; pointer-events: none;
+}
+
+/* ---------- Contenuto ---------- */
+.prose-pkk p{ color: var(--paper-dim); margin: 0 0 18px; line-height: 1.75; max-width: 68ch; }
+.prose-pkk strong{ color: var(--paper); }
+.prose-pkk em{ color: var(--orange); font-style: normal; }
+.prose-pkk a{
+  color: var(--orange); text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat; background-position: left bottom; background-size: 100% 1px;
+  padding-bottom: 1px; transition: background-size .2s var(--ease), color .15s ease;
+}
+.prose-pkk a:hover{ background-size: 100% 2px; color: #fff; }
+
+.section-heading{
+  font-family: 'Oswald', sans-serif; font-weight: 600;
+  color: var(--paper); font-size: clamp(1.5rem, 2.6vw, 2rem);
+  position: relative; padding-left: 20px; margin: 56px 0 20px;
+}
+.section-heading:first-of-type{ margin-top: 0; }
+.section-heading::before{
+  content: ""; position: absolute; left: 0; top: 0.2em; bottom: 0.2em;
+  width: 4px; background: linear-gradient(var(--orange), var(--red));
+}
+
+blockquote.kquote{
+  border-left: 3px solid var(--yellow);
+  padding: 4px 8px 4px 26px;
+  font-family: 'Oswald', sans-serif; font-size: 1.15rem; font-weight: 500;
+  color: var(--paper); margin: 30px 0;
+}
+
+figure.pkk-figure{ max-width: 420px; margin-left: auto; margin-right: auto; }
+figure.pkk-figure img, .gallery-grid img{
+  border: 1px solid var(--line);
+  filter: saturate(0.92) contrast(1.04);
+  cursor: zoom-in;
+  transition: transform .4s var(--ease), border-color .3s ease;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+figure.pkk-figure img:hover, .gallery-grid img:hover{ transform: scale(1.015); border-color: rgba(255,122,26,0.4); }
+figcaption{ color: var(--paper-dim); font-size: 0.85rem; margin-top: 10px; text-align: center; }
+.hero-tiger{ image-rendering: -webkit-optimize-contrast; }
+
+/* card teacher con barra di grado */
+.teacher-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--orange);
+  padding: 18px 20px;
+}
+.dan-bar{ display: flex; gap: 4px; margin-top: 10px; }
+.dan-tick{ height: 5px; flex: 1; background: rgba(237,230,216,0.14); }
+.dan-tick.filled{ background: linear-gradient(90deg, var(--orange), var(--yellow)); }
+
+.info-panel{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--orange);
+  padding: 22px 24px;
+}
+.info-panel h3{ color: var(--paper); font-family: 'Oswald', sans-serif; font-weight: 600; margin: 0 0 6px; }
+.info-panel h3:not(:first-child){ margin-top: 20px; }
+
+.doc-card{
+  display: flex; align-items: center; gap: 12px;
+  border: 1px solid var(--line); border-bottom: 2px solid transparent;
+  padding: 14px 16px; color: var(--paper-dim);
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+.doc-card:hover{ border-bottom-color: var(--orange); background: var(--panel); color: var(--paper); }
+
+table.schedule{ width: 100%; border-collapse: collapse; }
+table.schedule th, table.schedule td{ text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+table.schedule th{ font-family: 'Oswald', sans-serif; color: var(--orange); font-weight: 600; font-size: 0.85rem; }
+table.schedule td{ color: var(--paper-dim); }
+table.schedule tr:hover td{ background: var(--panel); color: var(--paper); }
+
+.map-frame{ border: 1px solid var(--line); width: 100%; aspect-ratio: 4/3; filter: grayscale(0.3) invert(0.92) contrast(0.9); }
+@media (min-width: 640px){ .map-frame{ aspect-ratio: 16/8; } }
+.map-consent{
+  border: 1px dashed var(--line);
+  background: var(--panel);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.badge-cat{
+  display: inline-block; padding: 3px 10px;
+  border: 1px solid rgba(255,122,26,0.4); color: var(--orange);
+  font-family: 'Oswald', sans-serif; font-size: 0.78rem; letter-spacing: 0.03em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer{ background: #050403; border-top: 2px solid var(--orange); }
+
+/* ---------- Torna su ---------- */
+.to-top{
+  position: fixed; right: 20px; bottom: 20px; z-index: 90;
+  width: 46px; height: 46px; border: 1px solid rgba(255,122,26,0.4);
+  background: var(--panel); color: var(--orange); font-size: 1.2rem; line-height: 1;
+  cursor: pointer; transition: background .15s ease, transform .2s var(--ease);
+}
+.to-top:hover{ background: var(--orange); color: #0a0907; transform: translateY(-3px); }
+.to-top[hidden]{ display: none; }
+
+/* ---------- Lightbox ---------- */
+.lightbox{
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(5,4,3,0.94);
+  display: flex; align-items: center; justify-content: center; padding: 40px;
+}
+.lightbox[hidden]{ display: none; }
+.lightbox-img{ max-width: 100%; max-height: 100%; border: 1px solid rgba(255,122,26,0.3); }
+.lightbox-close{
+  position: absolute; top: 20px; right: 24px; width: 42px; height: 42px;
+  background: transparent; border: 1px solid rgba(237,230,216,0.3); color: var(--paper);
+  font-size: 1.5rem; cursor: pointer; transition: background .15s ease, border-color .15s ease;
+}
+.lightbox-close:hover{ background: var(--orange); border-color: var(--orange); color: #0a0907; }
+body.lightbox-open{ overflow: hidden; }
+
+::selection{ background: var(--orange); color: #0a0907; }
+
+/* ---------- Banner cookie ---------- */
+.pkk-cookie-banner{
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+  background: var(--panel);
+  border-top: 2px solid var(--orange);
+  padding: 16px 20px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;
+}
+.pkk-cookie-banner[hidden]{ display: none; }
+.pkk-cookie-banner p{ margin: 0; color: var(--paper-dim); font-size: 0.85rem; max-width: 60ch; }
+.pkk-cookie-banner a{ color: var(--orange); }
+@media (min-width: 640px){ .pkk-cookie-banner{ justify-content: space-between; padding: 16px 32px; } }
